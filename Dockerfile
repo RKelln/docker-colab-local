@@ -179,7 +179,7 @@ RUN cd /colabtools && \
     pip2 install /colabtools/dist/google-colab-0.0.1a1.tar.gz && \
     jupyter nbextension install --py google.colab
 
-RUN pip install jupyter_http_over_ws && \
+RUN pip install --upgrade jupyter_http_over_ws>=0.0.1a3 && \
     jupyter serverextension enable --py jupyter_http_over_ws
 
 # Set up our pip/python aliases. We just copy the same file to two places
